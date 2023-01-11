@@ -12,7 +12,12 @@ readme = "../README.md"
 homepage = "https://github.com/slawlor/ractor"
 categories = ["actor", "erlang"]
 
+[features]
+cluster = []
+default = []
+
 [dependencies]
+## Required dependencies
 async-trait = "0.1"
 dashmap = "5"
 futures = "0.3"

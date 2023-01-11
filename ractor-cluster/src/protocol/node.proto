@@ -1,0 +1,20 @@
+// Copyright (c) Sean Lawlor
+//
+// This source code is licensed under both the MIT license found in the
+// LICENSE-MIT file in the root directory of this source tree.
+
+// NOTE: We make heavy use of oneof syntax here in order to deal with a rust-like enum
+// type. You can see https://developers.google.com/protocol-buffers/docs/proto3#oneof for
+// the syntax and guide
+
+syntax = "proto3";
+
+package node;
+
+
+// A placeholder message representing an
+// authenticated inter-ndoe message
+message NodeMessage {
+    // Some value
+    int32 value = 1;
+}

@@ -98,7 +98,8 @@ pub trait Actor: Sized + Sync + Send + 'static {
     async fn handle(&self, myself: ActorRef<Self>, message: Self::Msg, state: &mut Self::State) {}
 
     /// Handle the incoming supervision event. Unhandled panicks will captured and
-    /// sent the the supervisor(s)
+    /// sent the the supervisor(s). The default supervision behavior is to ignore all
+    /// child events. To override this behavior, implement this method.
     ///
     /// * `myself` - A handle to the [ActorCell] representing this actor
     /// * `message` - The message to process
